@@ -1,0 +1,37 @@
+#                                                                        #
+# Routes configuration                                                   #
+#                                                                        #
+# This file contains the configuration for the MVC router.               #
+# Just add your own modifications as necessary.                          #
+#                                                                        #
+# Please refer to the FLOW3 manual for possible configuration options.   #
+#                                                                        #
+
+##
+# TYPO3 subroutes
+-
+  name: 'Setup'
+  uriPattern: 'setup/index'
+  defaults:
+    '@package':    'TYPO3.Setup'
+    '@controller': 'Setup'
+    '@action':     'index'
+    '@format':     'html'
+  appendExceedingArguments: true
+
+-
+  name: 'Login'
+  uriPattern: 'setup/login(/{@action})'
+  defaults:
+    '@package':    'TYPO3.Setup'
+    '@controller': 'Login'
+    '@action':     'login'
+    '@format':     'html'
+  appendExceedingArguments: true
+
+-
+  name: 'TYPO3'
+  uriPattern: '<TYPO3Subroutes>'
+  subRoutes:
+    TYPO3Subroutes:
+      package: TYPO3.TYPO3
