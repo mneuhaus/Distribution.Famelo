@@ -22,8 +22,6 @@ if ($rootPath === FALSE) {
 
 require($rootPath . 'Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Bootstrap.php');
 
-require($rootPath . "Configuration/Environment.php");
-
 $context = getenv('FLOW_CONTEXT') ?: (getenv('REDIRECT_FLOW_CONTEXT') ?: 'Development');
 $bootstrap = new \TYPO3\Flow\Core\Bootstrap($context);
 $bootstrap->run();

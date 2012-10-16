@@ -21,6 +21,7 @@
     "require-dev": {
         "typo3/kickstart": "dev-master",
         "typo3/buildessentials": "dev-master",
+        "typo3/surf": "dev-master",
         "mikey179/vfsstream": "1.1.*"
     },
     "minimum-stability": "dev",
