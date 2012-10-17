@@ -1,4 +1,4 @@
-#!/usr/local/bin/php5-53LATEST-CLI
+#!/usr/bin/env php
 <?php
 
 /*                                                                        *
@@ -14,8 +14,6 @@
 /**
  * Bootstrap for the command line
  */
-
-require(__DIR__ . "/Configuration/Environment.php");
 
 require(__DIR__ . '/Packages/Framework/TYPO3.Flow/Scripts/flow.php');
 
